@@ -13,7 +13,7 @@ public class MainFrame extends Frame {
     private int count = 0;
     private Timer t1;
     private Timer t2;
-    private int labx = 50, laby = 100;
+    private int labx = 50, laby = 100,n1=141,n2=228,n3=255;
 
     public MainFrame() {
         init();
@@ -54,7 +54,11 @@ public class MainFrame extends Frame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 labx += 5;
+                n1+=0.1;
+                n2+=0.1;
+                n3+=0.1;
                 lab1.setLocation(labx, laby);
+                lab1.setForeground(new Color(n1, n2, n3));
                 if(labx>=500){
                  t1.stop();
                  t2.start();
@@ -66,7 +70,11 @@ public class MainFrame extends Frame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 labx -= 5;
+                n1-=0.1;
+                n2-=0.1;
+                n3-=0.1;
                 lab1.setLocation(labx, laby);
+                lab1.setForeground(new Color(n1, n2, n3));
                 if(labx<=0){
                  t2.stop();
                  t1.start();
@@ -74,6 +82,6 @@ public class MainFrame extends Frame {
 
             }
         });
-        System.out.print(this.getWidth() + " " + this.getHeight());
+
     }
 }
