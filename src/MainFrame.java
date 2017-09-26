@@ -55,7 +55,7 @@ public class MainFrame extends Frame {
             public void actionPerformed(ActionEvent e) {
                 labx += 5;
                 n1+=0.1;
-                n2+=0.1;
+                n2+=0;
                 n3+=0.1;
                 lab1.setLocation(labx, laby);
                 lab1.setForeground(new Color(n1, n2, n3));
@@ -71,7 +71,7 @@ public class MainFrame extends Frame {
             public void actionPerformed(ActionEvent e) {
                 labx -= 5;
                 n1-=0.1;
-                n2-=0.1;
+                n2-=0;
                 n3-=0.1;
                 lab1.setLocation(labx, laby);
                 lab1.setForeground(new Color(n1, n2, n3));
